@@ -1,5 +1,5 @@
 # Variables + default params init
-
+param=0
 
 # Parse aguments
 while [[ $# -gt 0 ]]
@@ -9,11 +9,12 @@ key="$1"
 	-h|--help)
 	echo -e "Description:"
 	echo -e "\nParameters:"
+	echo -e "\n\n\n"
 	exit 0
 	;;
 
         -p|--path)
-        path=$2
+        param=$2
         shift
         shift
 	;;
@@ -25,4 +26,9 @@ key="$1"
         esac
 done
 
-echo -e "########## "
+if [ ${param} -eq 1 ]
+then
+	echo "FLAG"
+else
+	echo ${param}
+fi
