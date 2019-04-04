@@ -9,7 +9,7 @@ key="$1"
 	-h|--help)
 	echo -e "Description:"
 	echo -e "\nParameters:"
-	echo -e "\n\n\n"
+	echo -e "\n"
 	exit 0
 	;;
 
